@@ -38,13 +38,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ex1_Munje">
-    <configuration name="Ex10_Operator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0315.Ex10_Operator" />
+  <component name="RunManager" selected="Application.Ex14_ForMunje">
+    <configuration name="Ex10_MultiFor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0318.Ex10_MultiFor" />
       <module name="Naver0314JavaProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day0315.*" />
+          <option name="PATTERN" value="day0318.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -52,12 +52,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex11_Operator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0315.Ex11_Operator" />
+    <configuration name="Ex11_For" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0318.Ex11_For" />
       <module name="Naver0314JavaProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day0315.*" />
+          <option name="PATTERN" value="day0318.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,12 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex12_Munje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0315.Ex12_Munje" />
+    <configuration name="Ex12_Gugudan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0318.Ex12_Gugudan" />
       <module name="Naver0314JavaProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day0315.*" />
+          <option name="PATTERN" value="day0318.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,8 +78,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex1_Munje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0318.Ex1_Munje" />
+    <configuration name="Ex13_ForMunje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0318.Ex13_ForMunje" />
+      <module name="Naver0314JavaProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day0318.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex14_ForMunje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0318.Ex14_ForMunje" />
       <module name="Naver0314JavaProject" />
       <extension name="coverage">
         <pattern>
@@ -105,26 +118,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex9_Munje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0315.Ex9_Munje" />
-      <module name="Naver0314JavaProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day0315.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Ex1_Munje" />
-        <item itemvalue="Application.Ex12_Munje" />
-        <item itemvalue="Application.Ex11_Operator" />
-        <item itemvalue="Application.Ex10_Operator" />
-        <item itemvalue="Application.Ex9_Munje" />
+        <item itemvalue="Application.Ex14_ForMunje" />
+        <item itemvalue="Application.Ex13_ForMunje" />
+        <item itemvalue="Application.Ex12_Gugudan" />
+        <item itemvalue="Application.Ex11_For" />
+        <item itemvalue="Application.Ex10_MultiFor" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +138,7 @@
       <updated>1710403886012</updated>
       <workItem from="1710403887151" duration="1682000" />
       <workItem from="1710462694515" duration="12350000" />
-      <workItem from="1710480835831" duration="13370000" />
+      <workItem from="1710480835831" duration="30809000" />
     </task>
     <servers />
   </component>
