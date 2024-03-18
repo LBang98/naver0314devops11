@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../naver0314devops11" beforeDir="false" />
-    </list>
+    <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +38,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ex12_Munje">
+  <component name="RunManager" selected="Application.Ex1_Munje">
     <configuration name="Ex10_Operator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day0315.Ex10_Operator" />
       <module name="Naver0314JavaProject" />
@@ -81,13 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex4_MainArgs" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0315.Ex4_MainArgs" />
+    <configuration name="Ex1_Munje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0318.Ex1_Munje" />
       <module name="Naver0314JavaProject" />
-      <option name="PROGRAM_PARAMETERS" value="Hello Apple 10 20" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day0315.*" />
+          <option name="PATTERN" value="day0318.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,9 +91,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex8_Operator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0315.Ex8_Operator" />
+    <configuration name="Ex4_MainArgs" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0315.Ex4_MainArgs" />
       <module name="Naver0314JavaProject" />
+      <option name="PROGRAM_PARAMETERS" value="Hello Apple 10 20" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="day0315.*" />
@@ -123,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex1_Munje" />
         <item itemvalue="Application.Ex12_Munje" />
         <item itemvalue="Application.Ex11_Operator" />
         <item itemvalue="Application.Ex10_Operator" />
         <item itemvalue="Application.Ex9_Munje" />
-        <item itemvalue="Application.Ex8_Operator" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +138,7 @@
       <updated>1710403886012</updated>
       <workItem from="1710403887151" duration="1682000" />
       <workItem from="1710462694515" duration="12350000" />
-      <workItem from="1710480835831" duration="9318000" />
+      <workItem from="1710480835831" duration="12555000" />
     </task>
     <servers />
   </component>
