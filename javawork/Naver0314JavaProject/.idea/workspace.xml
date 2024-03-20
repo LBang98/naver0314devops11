@@ -38,46 +38,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ex14_ForMunje">
-    <configuration name="Ex10_MultiFor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0318.Ex10_MultiFor" />
-      <module name="Naver0314JavaProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day0318.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex11_For" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0318.Ex11_For" />
-      <module name="Naver0314JavaProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day0318.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex12_Gugudan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0318.Ex12_Gugudan" />
-      <module name="Naver0314JavaProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day0318.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Ex13_ForMunje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day0318.Ex13_ForMunje" />
       <module name="Naver0314JavaProject" />
@@ -104,6 +65,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ex1_MathRandom" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0320.Ex1_MathRandom" />
+      <module name="Naver0314JavaProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day0320.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex2_RandomClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0320.Ex2_RandomClass" />
+      <module name="Naver0314JavaProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day0320.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex3_RandomGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0320.Ex3_RandomGame" />
+      <module name="Naver0314JavaProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day0320.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Ex4_MainArgs" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day0315.Ex4_MainArgs" />
       <module name="Naver0314JavaProject" />
@@ -120,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex3_RandomGame" />
+        <item itemvalue="Application.Ex2_RandomClass" />
+        <item itemvalue="Application.Ex1_MathRandom" />
         <item itemvalue="Application.Ex14_ForMunje" />
         <item itemvalue="Application.Ex13_ForMunje" />
-        <item itemvalue="Application.Ex12_Gugudan" />
-        <item itemvalue="Application.Ex11_For" />
-        <item itemvalue="Application.Ex10_MultiFor" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +138,7 @@
       <updated>1710403886012</updated>
       <workItem from="1710403887151" duration="1682000" />
       <workItem from="1710462694515" duration="12350000" />
-      <workItem from="1710480835831" duration="30809000" />
+      <workItem from="1710480835831" duration="43387000" />
     </task>
     <servers />
   </component>
