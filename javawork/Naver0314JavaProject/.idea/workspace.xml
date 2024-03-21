@@ -25,26 +25,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/ibyeonghyeon/Desktop/naver0314/workall/javawork/Naver0314JavaProject/src/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "/Users/ibyeonghyeon/Desktop/naver0314/workall/javawork/Naver0314JavaProject/src/Main.java",
+    "settings.editor.selected.configurable": "preferences.customizations",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="Ex13_ForMunje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0318.Ex13_ForMunje" />
+}]]></component>
+  <component name="RunManager" selected="Application.Book199_9">
+    <configuration name="Book199_9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0321.Book199_9" />
       <module name="Naver0314JavaProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day0318.*" />
+          <option name="PATTERN" value="day0321.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -52,25 +53,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex14_ForMunje" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0318.Ex14_ForMunje" />
+    <configuration name="Ex10_Array2cha" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0321.Ex10_Array2cha" />
       <module name="Naver0314JavaProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day0318.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ex1_MathRandom" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0320.Ex1_MathRandom" />
-      <module name="Naver0314JavaProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day0320.*" />
+          <option name="PATTERN" value="day0321.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,13 +106,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ex7_Study701" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0321.Ex7_Study701" />
+      <module name="Naver0314JavaProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day0321.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Book199_9" />
+        <item itemvalue="Application.Ex10_Array2cha" />
+        <item itemvalue="Application.Ex7_Study701" />
         <item itemvalue="Application.Ex3_RandomGame" />
         <item itemvalue="Application.Ex2_RandomClass" />
-        <item itemvalue="Application.Ex1_MathRandom" />
-        <item itemvalue="Application.Ex14_ForMunje" />
-        <item itemvalue="Application.Ex13_ForMunje" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +139,8 @@
       <updated>1710403886012</updated>
       <workItem from="1710403887151" duration="1682000" />
       <workItem from="1710462694515" duration="12350000" />
-      <workItem from="1710480835831" duration="56340000" />
+      <workItem from="1710480835831" duration="57506000" />
+      <workItem from="1710981410012" duration="20934000" />
     </task>
     <servers />
   </component>
