@@ -2,7 +2,7 @@ package day0321;
 
 import java.util.Scanner;
 
-public class Book199_9 {
+public class Book199_9_if {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -14,9 +14,9 @@ public class Book199_9 {
 
         while (true){
 
-            System.out.println("=".repeat(30));
+            System.out.println("=".repeat(50));
             System.out.println("1.학생수 | 2.점수입력 | 3. 점수리스트 | 4. 분석 | 5. 종료");
-            System.out.println("=".repeat(30));
+            System.out.println("=".repeat(50));
 
             System.out.print("선택 > ");
             ans = sc.nextInt();

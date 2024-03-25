@@ -39,9 +39,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Book199_9">
-    <configuration name="Book199_9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day0321.Book199_9" />
+  <component name="RunManager">
+    <configuration name="Book199_9_if" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day0321.Book199_9_if" />
       <module name="Naver0314JavaProject" />
       <extension name="coverage">
         <pattern>
@@ -121,7 +121,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Book199_9" />
+        <item itemvalue="Application.Book199_9_if" />
         <item itemvalue="Application.Ex10_Array2cha" />
         <item itemvalue="Application.Ex7_Study701" />
         <item itemvalue="Application.Ex3_RandomGame" />
@@ -140,7 +140,7 @@
       <workItem from="1710403887151" duration="1682000" />
       <workItem from="1710462694515" duration="12350000" />
       <workItem from="1710480835831" duration="57506000" />
-      <workItem from="1710981410012" duration="20934000" />
+      <workItem from="1710981410012" duration="46221000" />
     </task>
     <servers />
   </component>
