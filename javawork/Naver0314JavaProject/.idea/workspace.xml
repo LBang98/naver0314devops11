@@ -35,7 +35,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "/Users/ibyeonghyeon/Desktop/naver0314/workall/javawork/Naver0314JavaProject/src/Main.java",
-    "settings.editor.selected.configurable": "preferences.customizations",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -140,7 +140,7 @@
       <workItem from="1710403887151" duration="1682000" />
       <workItem from="1710462694515" duration="12350000" />
       <workItem from="1710480835831" duration="57506000" />
-      <workItem from="1710981410012" duration="69806000" />
+      <workItem from="1710981410012" duration="95742000" />
     </task>
     <servers />
   </component>
