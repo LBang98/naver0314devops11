@@ -40,6 +40,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="day0328" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Book199_9_if" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day0321.Book199_9_if" />
@@ -141,7 +146,7 @@
       <workItem from="1710403887151" duration="1682000" />
       <workItem from="1710462694515" duration="12350000" />
       <workItem from="1710480835831" duration="57506000" />
-      <workItem from="1710981410012" duration="116967000" />
+      <workItem from="1710981410012" duration="147639000" />
     </task>
     <servers />
   </component>
