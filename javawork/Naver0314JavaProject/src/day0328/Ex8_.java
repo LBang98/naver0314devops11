@@ -29,7 +29,7 @@ public class Ex8_ extends JFrame {
             super.paint(g);
 
             Image image1 = new ImageIcon(path).getImage();
-            g.drawImage(image1,20,20,460,400,this);
+            g.drawImage(image1,0,0,getWidth(),getHeight(),this);
 
         }
     }
@@ -42,6 +42,7 @@ public class Ex8_ extends JFrame {
         p.add(btnOpen);
 
         this.add("North",btnOpen);
+        this.add("Center",draw);
 
         btnOpen.addActionListener(new ActionListener() {
             @Override
@@ -54,7 +55,7 @@ public class Ex8_ extends JFrame {
                 draw.repaint();
             }
         });
-        this.add("Center",draw);
+
     }
 
 
