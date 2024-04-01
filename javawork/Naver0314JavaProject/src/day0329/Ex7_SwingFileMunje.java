@@ -104,7 +104,7 @@ public class Ex7_SwingFileMunje extends JFrame {
             throw new RuntimeException(e);
         } finally {
             try {
-                if (br != null) 
+                if (br != null)
                     br.close();
 
                 if (fr != null)
@@ -135,7 +135,7 @@ public class Ex7_SwingFileMunje extends JFrame {
         this.add("Center",new JScrollPane(table));
 
         //아래 콤보박스
-        text = new JTextField("이름",4);
+        text = new JTextField("",4);
         combo1 = new JComboBox<>(combolabel1);
         combo2 = new JComboBox<>(combolabel2);
         combo3 = new JComboBox<>(combolabel3);
