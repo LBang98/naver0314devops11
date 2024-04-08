@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../dbwork/mysql0403.sql" afterDir="false" />
-    </list>
+    <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +66,7 @@
       <recent name="$PROJECT_DIR$/.idea" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="day0408" />
       <recent name="day0405" />
       <recent name="day0401" />
       <recent name="day0329" />
@@ -181,7 +180,7 @@
       <workItem from="1712213011962" duration="2192000" />
       <workItem from="1712215300572" duration="14054000" />
       <workItem from="1712294570360" duration="1198000" />
-      <workItem from="1712295900222" duration="3702000" />
+      <workItem from="1712295900222" duration="27486000" />
     </task>
     <servers />
   </component>

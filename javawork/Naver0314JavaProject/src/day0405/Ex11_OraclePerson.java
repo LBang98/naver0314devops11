@@ -60,7 +60,10 @@ public class Ex11_OraclePerson {
         PreparedStatement pstmt = null;
         ResultSet rs =null;
 
-        sql = "select * from person";
+        sql = """
+             select pum, pname, page || '세' page, upper(pblood) ||'형'
+             pblood,to_char(ipsaday, 'yyyy-mm-dd hh:mi') ipsaday from person order by pnum asc
+            """;
 
         try {
             conn = DriverManager.getConnection(ORACLE_URL,USERNAME,PASSWORD);
