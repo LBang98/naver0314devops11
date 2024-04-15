@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px groove gray;
+        }
+
+        tr {
+            height: 40px;
+            border: 1px solid lightgray;
+        }
+
+        td, th {
+            border: 1px solid lightgray;
+            font-size: 20px;
+            font-family: 'Comic Sans MS';
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+<table>
+    <caption><h3>[전체 구구단]</h3></caption>
+    <tr>
+    <script>
+            for (let i = 2; i <= 9; i++) {
+            let a = `<th>${i}단</th>`;
+            document.write(a);
+        }
+    </script>
+    </tr>
+    <script>
+
+        for (let i = 1; i <= 9; i++) {
+            document.write("<tr>")
+            for (let j = 2; j <= 9; j++) {
+
+                let s = `<td>${j} X ${i} = ${i * j}</td>`
+                document.write(s);
+
+            }
+
+            let b = '</tr>'
+            document.write(b);
+        }
+    </script>
+
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구구단 출력</title>
+</head>
+<body>
+<h1>구구단 출력하기</h1>
+<input type="number" id="numberInput" placeholder="숫자 입력">
+<button onclick="printMultiplicationTable()">출력</button>
+<div id="output"></div>
+
+<script>
+  function printMultiplicationTable() {
+    const number = document.getElementById('numberInput').value;
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = ''; // 이전 결과를 클리어
+
+    if (number) {
+      for (let i = 1; i <= 9; i++) {
+        const result = number * i;
+        outputDiv.innerHTML += `${number} x ${i} = ${result}<br>`;
+      }
+    } else {
+      outputDiv.innerHTML = '유효한 숫자를 입력하세요.';
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px groove gray;
+        }
+
+        tr {
+            height: 40px;
+            border: 1px solid lightgray;
+        }
+
+        td, th {
+            border: 1px solid lightgray;
+            font-size: 20px;
+            font-family: 'Comic Sans MS';
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <script>
+
+        for (let i = 0; i <= 9; i++) {
+            document.write("<tr>");
+
+            let s;
+            for (let j = 2; j <= 9; j++) {
+
+                if (i == 0) {
+                    s = `<th>${j}단</th>`;
+                } else {
+                    s = `<td>${j} X ${i} = ${i * j}</td>`;
+                }
+                document.write(s);
+
+            }
+            document.write("</tr>")
+
+
+        }
+
+    </script>
+
+
+</table>
+
+
+</body>
+</html>
