@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colorful Sorted Circles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    select {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: white;
+      margin-top: 20px;
+    }
+    .num {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      margin: 5px;
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+      line-height: 50px;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .num:hover {
+      transform: scale(1.1);
+    }
+    #output {
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<h1>Lotto</h1>
+<select id="sel">
+  <option hidden disabled selected>선택해주세요</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+<div id="output"></div>
+
+<script>
+  document.getElementById("sel").onchange = function () {
+    let count = parseInt(this.value);
+    let output = document.getElementById("output");
+    output.innerHTML = ''; // 이전 결과를 지우기
+
+    for (let j = 0; j < count; j++) {
+      let array = [];
+      while (array.length < 5) {
+        let r = Math.floor(Math.random() * 46) + 1;
+        if (!array.includes(r)) { // 배열에 숫자가 이미 포함되어 있지 않은지 확인
+          array.push(r);
+        }
+      }
+      array.sort(function(a, b) { return a - b; }); // 숫자 배열을 오름차순으로 정렬
+
+      array.forEach(num => {
+        let color = getRandomColor(); // 랜덤 색상 생성기
+        let s = `
+                        <div class="num" style="background-color: ${color};">
+                            ${num}
+                        </div>
+                    `;
+        output.innerHTML += s; // output div에 생성된 HTML 추가
+      });
+
+      output.innerHTML += '<br>'; // 각 세트 후 줄바꿈 추가
+    }
+  }
+
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    num {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin-right: 5px;
+        border-radius: 100px;
+    }
+</style>
+
+<body>
+<select id="sel">
+    <option hidden disabled selected>선택</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+<br><br><br>
+
+<script>
+    const ddd = document.getElementById('sel');
+    ddd.onchange = function (){
+        alert("sdkfd");
+    }
+    document.getElementById('sel').onchange = function () {
+
+        let count = parseInt(document.getElementById("sel").value);
+        let array = [];
+
+        for (let j = 0; j < count; j++) {
+
+            for (let i = 0; i < 5; i++) {
+                let r = parseInt(Math.random() * 45);
+
+                array[i] = r;
+                if (i == 0){
+                } else if (r == array[i - 1]) {
+                    i--;
+                }
+            }
+
+            //정렬 생략
+
+            for (let i = 0; i < array.length; i++) {
+
+                let s = `
+                <div id="num">
+                ${array[i]} <br>
+                </div>
+                `;
+                document.write(s);
+            }
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
