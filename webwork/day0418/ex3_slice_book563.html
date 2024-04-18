@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let colors = ["red","green","white","black"];
+    for(let c of colors)
+        document.write("<h6>" + c + "</h6>");
+
+    //배열의 데이타 잘라내기
+    document.write("<hr>");
+    let newColor = colors.slice(2,4); //2번부터 3번까지 잘라서 반환
+    for (let c of colors)
+        document.write("<h6>" + c + "</h6>"); // colors 는 변화가 없음
+
+    document.write("<hr>");
+    for(let c of newColor)
+        document.write("<h6>" + c + "</h6>"); // blue, white 만 출력
+</script>
+
+
+</body>
+</html>
