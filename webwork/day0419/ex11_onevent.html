@@ -31,11 +31,13 @@
         #two {
             left: 400px;
             top: 100px;
+            visibility: hidden;
         }
 
         #three {
             left: 750px;
             top: 100px;
+            visibility: hidden;
         }
 
         #result {
@@ -76,17 +78,53 @@
         $(function () {
             let b = `<button type="button" class="btn btn-online-danger" id="btn1">영화예매</button>`;
             $("#one").append(b);
+            //극장선택버튼
+            let muse = `<button type="button" class="btn btn-online-danger" id="btn2">극장선택</button>`;
+            $("#two").append(muse);
+            //영화선택버튼
+            let movi = `<button type="button" class="btn btn-online-danger" id="btn3">영화선택</button>`;
+            $("#two").append(movi);
 
             //btn1 이벤트
             $("#btn1").click(function () {
-                alert("영화예매 버튼");
+
+                $("#two").css("visibility","visible");
             });
-            //극장선택
-            let muse = `<button type="button" class="btn btn-online-danger" id="btn2">극장선택</button>`;
-            $("#two").append(muse);
-            //영화선택
-            let movi = `<button type="button" class="btn btn-online-danger" id="btn3">영화선택</button>`;
-            $("#two").append(movi);
+            //btn2 이벤트
+            $("#btn2").click(function () {
+                $("#three").empty().css("visibility", "visible");
+
+                let m1= `<button type="button" class="btn btn-online-danger" data-name="CGV 강남점">CGV 강남점</button><br>`;
+                let m2= `<button type="button" class="btn btn-online-danger" data-name="MEGABOX 강남점">MEGABOX 강남점</button><br>`;
+                let m3= `<button type="button" class="btn btn-online-danger" data-name="CGV 교보타워점">CGV 교보타워점</button>`;
+                $("#three").append(m1);
+                $("#three").append(m2);
+                $("#three").append(m3);
+            });
+            //btn3 이벤트
+            $("#btn3").click(function () {
+                $("#three").css("visibility","visible");
+                $("#three").empty().css("visibility", "visible");
+
+                let mv1= `<button type="button" class="btn btn-online-danger" data-name="바람과 함께 사라지다">바람과 함께 사라지다</button><br>`;
+                let mv2= `<button type="button" class="btn btn-online-danger" data-name="엑시트">엑시트</button><br>`;
+                let mv3= `<button type="button" class="btn btn-online-danger" data-name="괴물">괴물</button>`;
+                $("#three").append(mv1);
+                $("#three").append(mv2);
+                $("#three").append(mv3);
+            });
+
+            // 극장 선택 및 영화 선택 버튼 클릭 이벤트
+            /*$("#three").on("click", ".theater, .movie", function () {
+                $("#result").text($(this).data("name")); // 결과 표시
+            });
+            */
+            $("#three").click(function (){
+
+                $("#result").text($(this).data("name")); // 결과 표시
+
+            })
+
 
         });
     </script>
