@@ -73,15 +73,32 @@
             $(".mycar").css("border","5px groove black");
         else
             $(".mycar").css("border","");
-
-
-
-
     });
+</script>
+<hr>
+<div class="input-group" style="width: 400px;">
+    <select class="form-select selphoto">
+        <option hidden disabled selected>select image</option>
+        <option value="../image/talent/17.jpg">신민아</option>
+        <option value="../image/talent/18.jpg">신세경</option>
+        <option value="../image/talent/19.jpg">수지</option>
+    </select>
+</div>
 
+<img src="../image/talent/1.jpg" class="photo" width="100">
+<h2 class="title"></h2>
+
+<script>
+$(".selphoto").change(function (){
+
+    let imgSrc = $(this).val();
+    //let name = $(".selphoto option:selected").text();   //방법 1
+    let name = $("option:selected",this).text();    //방법 2
+
+    $(".photo").attr("src",imgSrc);
+    $("h2.title").text(name);
+});
 
 </script>
-
-
 </body>
 </html>
