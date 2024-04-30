@@ -12,10 +12,11 @@ public class ShopDto {
     private Timestamp writeday;
 
     public ShopDto() {
-
+        super();
     }
 
     public ShopDto(String sname, int sprice, int scount, String scolor, String sphoto) {
+        super();
         this.sname = sname;
         this.sprice = sprice;
         this.scount = scount;

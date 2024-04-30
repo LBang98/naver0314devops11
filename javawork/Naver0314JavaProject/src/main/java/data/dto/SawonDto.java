@@ -1,4 +1,4 @@
-package data.dao;
+package data.dto;
 
 public class SawonDto {
 
