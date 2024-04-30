@@ -9,25 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../webwork/day0425/ex1_그림판.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/choijeewoo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/hanyesel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/hwangjeongeum.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/jeonjeehyeon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/kangdongwon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/kimtaehee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/kojoonhee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/parkboyoung.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/parkshinhye.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/ryoseongho.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/seolhyeon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/seongjoon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/shinminah.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/shinsekyeong.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/soojee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../webwork/image/talent/youahin.jpg" beforeDir="false" />
-    </list>
+    <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,8 +21,8 @@
         <option value="Interface" />
         <option value="HTML File" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="bit701" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,16 +53,16 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17 (2)",
-    "last_opened_file_path": "/Users/ibyeonghyeon/Desktop/naver0314/workall/javawork/Naver0314JavaProject/web",
+    "last_opened_file_path": "/Users/ibyeonghyeon/Desktop/naver0314/workall/javawork/Naver0314JavaProject/web/WEB-INF",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "/Users/ibyeonghyeon/Desktop/naver0314/workall/javawork/Naver0314JavaProject/src/Main.java",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -96,11 +78,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/WEB-INF" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/car" />
       <recent name="$PROJECT_DIR$/web/shop" />
       <recent name="$PROJECT_DIR$/web/image" />
-      <recent name="$PROJECT_DIR$/.idea/dataSources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web" />
@@ -181,7 +163,8 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.88" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.88" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="Naver0314JavaProject:war exploded">
           <settings>
@@ -268,93 +251,6 @@
         </option>
       </method>
     </configuration>
-    <configuration name="hello.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.88" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/WEB-INF/hello.jsp" />
-      <deployment>
-        <artifact name="Naver0314JavaProject:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/Naver0314JavaProject_war_exploded" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="0a4daab6-897c-4de6-a4b6-674143cd615c" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="62394" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="Naver0314JavaProject:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Ex4_MainArgs" />
       <item itemvalue="Application.Book199_9_if" />
@@ -362,11 +258,9 @@
       <item itemvalue="Application.Ex10_Array2cha" />
       <item itemvalue="Application.SmartPhone" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.88" />
-      <item itemvalue="Tomcat Server.hello.jsp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Tomcat Server.hello.jsp" />
         <item itemvalue="Application.Ex9_Inheri" />
         <item itemvalue="Application.SmartPhone" />
         <item itemvalue="Application.Book199_9_if" />
@@ -406,7 +300,11 @@
       <workItem from="1714012419200" duration="1350000" />
       <workItem from="1714013799430" duration="6926000" />
       <workItem from="1714026415015" duration="15830000" />
-      <workItem from="1714098704111" duration="5457000" />
+      <workItem from="1714098704111" duration="6764000" />
+      <workItem from="1714351199873" duration="35000" />
+      <workItem from="1714351271911" duration="2000" />
+      <workItem from="1714351288121" duration="9455000" />
+      <workItem from="1714362032413" duration="19852000" />
     </task>
     <servers />
   </component>

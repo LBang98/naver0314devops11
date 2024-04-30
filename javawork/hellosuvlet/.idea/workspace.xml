@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70559af5-c4e7-49d2-8967-e089107cf05b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../webwork/day0425/ex1_그림판.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Naver0314JavaProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver0314JavaProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Naver0314JavaProject/Naver0314JavaProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver0314JavaProject/Naver0314JavaProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Naver0314JavaProject/src/day0408/cod1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Naver0314JavaProject/web/ex4_car.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Naver0314JavaProject/web/ex4_car.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +36,7 @@
       <updated>1714026369594</updated>
       <workItem from="1714026370768" duration="29000" />
       <workItem from="1714026409141" duration="3000" />
+      <workItem from="1714351241160" duration="4000" />
     </task>
     <servers />
   </component>

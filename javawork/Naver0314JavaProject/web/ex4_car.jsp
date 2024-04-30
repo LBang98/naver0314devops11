@@ -31,11 +31,19 @@
             height: 180px;
             border-radius: 20px;
         }
-        div.box{
-            width: 500px;
-            height: 200px;
+        div.box>b{
+            width: 300px;
+            height: 50px;
             margin-left: 100px;
-            font-size: 50px;
+            margin-top: 400px;
+            font-size:25px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        button.btn{
+            background-color: white;
+            margin-left: 50px;
+
         }
     </style>
 
@@ -62,7 +70,9 @@
 <%}
 %>
 <br><br>
-<div class="box">메시지</div>
+<div class="box">
+    <b>메시지</b>
+</div>
 
 <script>
     $(function (){
@@ -71,7 +81,7 @@
 
             $(this).click(function (){
                 let msg = "구매하였습니다";
-                $("div.box").html(msg);
+                $("div.box>b").html(msg);
             });
         });
     });
