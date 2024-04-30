@@ -88,7 +88,7 @@
             <tr>
                 <th width="100" class="table-danger">프로필사진</th>
                 <td>
-                    <img class="photo" src="" onerror="this.src='../image/talent/noimage1.png'">
+                    <img class="photo" src="<%=dto.getPhoto().equals("no")?  "../image/talent/noimage1.png" : dto.getPhoto()%>">
                     <select class="form-select" name="photo" id="photo">
                         <option value="no">프로필사진없음</option>
                         <%

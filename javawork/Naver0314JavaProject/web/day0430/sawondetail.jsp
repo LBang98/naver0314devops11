@@ -52,7 +52,6 @@
         <tr>
             <td><h5>나이 : <%=dto.getAge()%> 세</h5></td>
         </tr>
-
         <tr>
             <td><h5>주소 : <%=dto.getAddr()%></h5></td>
         </tr>
@@ -88,6 +87,7 @@
 
         let num = $(this).attr("num");
         let sawonname = $(this).attr("name");
+
         let a = confirm(sawonname + " 사원을 삭제하시겠습니까?")
         if(a){
             location.href='sawondelete.jsp?num=<%=dto.getNum()%>'
