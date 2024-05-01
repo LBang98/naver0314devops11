@@ -52,6 +52,14 @@
         </button>
     </div>
 </div>
+<div style="margin: 20px 50px;">
+    <button type="button" class="btn btn-success" style="width: 170px;"
+    onclick="location.href='sawongenderanalysis.jsp'">우리회사성별분석표</button>
+
+    <button type="button" class="btn btn-success" style="width: 170px;"
+            onclick="location.href='sawonbuseoanalysis.jsp'">우리회사부서별분석표</button>
+
+</div>
 <%
     for(SawonDto dto:list){%>
 

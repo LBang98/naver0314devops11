@@ -16,10 +16,10 @@
         }
         img.photo{
             position: absolute;
-            left:320px;
-            top: 100px;
+            left:340px;
+            top: 250px;
             width: 150px;
-            border: 3px solid gray;
+            border: 2px solid gray;
         }
     </style>
 
@@ -65,10 +65,10 @@
                 <th width="100" class="table-danger">부서</th>
                 <td>
                     <select class="form-select" name="buseo">
-                        <option value="<%=dto.getBuseo()%>">교육부</option>
-                        <option value="<%=dto.getBuseo()%>">인사부</option>
-                        <option value="<%=dto.getBuseo()%>">홍보부</option>
-                        <option value="<%=dto.getBuseo()%>">해외파견부</option>
+                        <option <%=dto.getBuseo().equals("교육부")?"selected":""%>>교육부</option>
+                        <option <%=dto.getBuseo().equals("인사부")?"selected":""%>>인사부</option>
+                        <option <%=dto.getBuseo().equals("홍보부")?"selected":""%>>홍보부</option>
+                        <option <%=dto.getBuseo().equals("해외파견부")?"selected":""%>>해외파견부</option>
                     </select>
                 </td>
             </tr>
@@ -77,10 +77,12 @@
                 <th width="100" class="table-danger">성별</th>
                 <td>
                     <label>
-                        <input type="radio" name="gender" value="<%=dto.getGender()%>" checked>남자
+                        <input type="radio" name="gender" value="남자"
+                            <%=dto.getGender().equals("남자")?"checked":""%>>남자
                     </label>
                     <label>
-                        <input type="radio" name="gender" value="<%=dto.getGender()%>">여자
+                        <input type="radio" name="gender" value="여자"
+                        <%=dto.getGender().equals("여자")?"checked":""%>>여자
                     </label>
                 </td>
             </tr>
