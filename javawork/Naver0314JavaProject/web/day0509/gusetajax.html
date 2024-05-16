@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=East+Sea+Dokdo&family=Jua&family=Gaegu&family=Gamja+Flower&family=Pacifico&family=Single+Day&display=swap"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <style>
+        body * {
+            font-family: 'Jua';
+        }
+        div.guestlist div.box{
+            width: 400px;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        div.guestlist div.box img{
+            width: 50px;
+            margin-right: 5px;
+        }
+        div.guestlist div.box a{
+            color: black;
+            cursor: pointer;
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(function (){
+            list(); //처음 로딩 시 일단 목록 출력
+
+            //db저장 버튼 이벤트
+            $("#btnsave").click(function (){
+                //입력체크
+                let avata = $("#selavata").val();
+                let nickname = $("#nickname").val();
+                let content = $("#content").val();
+
+                if(nickname.length == 0){
+                    alert("닉네임을 입력해주세요");
+                    return;
+                }
+                if(content.length == 0){
+                    alert("내용을 입력해주세요")
+                    return;
+                }
+                $.ajax({
+                    type: "post",
+                    dataType: "html",
+                    url: "./data/insertdata.jsp",
+                    //data:"avata="+avata+"&nickname="+nickname+"&content="+content,
+                    data:{"avata":avata,"nickname":nickname,"content":content},
+                    success:function (){
+                        //데이타 추가 성공 후 해야할일들
+                        list(); //목록 다시 출력
+                        //입력값들 초기화
+                        $("#selavata").val("../image/snoopyAvata/s1.JPG")
+                        $(".avata").attr("src","../image/snoopyAvata/s1.JPG");
+                        $("#nickname").val("");
+                        $("#content").val("");
+                    }
+                });
+            });
+
+            //검색버튼 이벤트
+            $("#btnsearch").click(function (){
+                list();
+            });
+            //삭제버튼 이벤트
+            $(document).on("click",".adel",function (e){
+                e.preventDefault(); //기본 이벤트 무효화
+
+               //태그에 넣은 num을 읽는다
+               let num = $(this).attr("num");
+
+               let a = confirm("삭제하시겠습니까?")
+                if(a){
+                    $.ajax({
+                        type:"get",
+                        dataType:"html",
+                        url:"./data/deletedata.jsp",
+                        data:{"num":num},
+                        success:function (){
+                            list(); //목록 다시 출력
+                        }
+                    });
+                }
+            });
+            // 수정버튼 이벤트
+            $(document).on("click", ".amod", function (e) {
+                e.preventDefault();
+
+                // num 가져오기
+                let num = $(this).attr("num");
+
+                // 백엔드에서 num에 대한 DTO를 가져와야 한다.
+                $.ajax({
+                    type: "get",
+                    dataType: "json",
+                    data: {"num": num},
+                    url: "./data/getData.jsp", // DTO 데이터를 가져오는 URL
+                    success: function (data) {
+                        // 데이터를 성공적으로 가져왔을 때 입력 필드에 값을 채워준다.
+                        $("#unum").val(data.num);
+                        $("#updatename").val(data.nickname);
+                        $("#updatecontent").val(data.content);
+                    }
+                });
+        });
+
+                        // 수정 완료 버튼 클릭 이벤트 바인딩 (모달 내의 버튼)
+                        $("#updatebtn").click(function (){
+                            let num = $("#unum").val();
+                            let nickname = $("#updatename").val();
+                            let content = $("#updatecontent").val();
+
+                            let data = "num=" + num + "&nickname=" + nickname + "&content=" + content;
+
+                            $.ajax({
+                                type:"post",
+                                dataType:"html",
+                                url:"./data/update.jsp",
+                                data:data,
+                                success:function (){
+                                    list();
+                                }
+                            })
+                        });
+        }); //end function
+
+            function list(){
+            let search = $("#search").val();
+
+            $("div.guestlist").empty();
+            $.ajax({
+                type:"get",
+                dataType:"json",
+                data:{"search":search},
+                url:"./data/listdata.jsp",
+                success:function (data){
+                    //검색단어 지우기
+                    $("#search").val("");
+
+                    let s = "";
+                    s = `총 ${data.length}개의 방명록 글이 있습니다<br>`;
+                    $.each(data, function (idx, ele){
+                        s+=`
+                        <div class="box">
+                         <img src="${ele.avata}">
+                          <b>${ele.nickname}</b>
+                          <span style="float: right;">
+                            <a class="amod" num="${ele.num}"
+                            data-bs-toggle = "modal" data-bs-target="#myModalUpdate">수정</a>
+                            /
+                            <a class="adel" num="${ele.num}">삭제</a>
+                          </span>
+                          <br>
+                         <span style="color: gray; font-size: 13px;">${ele.writeday}</span>
+                         <br>
+                        <pre style="background-color: #ddd;">${ele.content}</pre>
+                        </div>
+                        `;
+
+                    });
+                    $("div.guestlist").html(s);
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+<!-- The Modal : 수정 시 호출되는 모달다이얼로그 -->
+<div class="modal" id="myModalUpdate">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">방명록 닉네임/내용 수정</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <b>닉네임</b>
+                <input type="hidden" id="unum">
+                <input type="text" style="margin-left: 20px" id="updatename"><br>
+                <b>내용</b>
+                <textarea style="width: 100%; height: 100px" id="updatecontent"></textarea>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="updatebtn">수정</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div style="margin: 10px; width: 400px">
+    <h5 class="alert alert-info">방명록</h5>
+    <div class="inputform">
+        <div class="input-group">
+            <select class="form-select" id="selavata">
+                <script>
+                    for (let i = 1; i <= 10; i++) {
+                        document.write(`<option value="../image/snoopyAvata/s${i}.JPG">아바타 #${i}</option>`);
+                    }
+                </script>
+            </select>
+            <img src="../image/snoopyAvata/s1.JPG" width="40" class="avata">
+            <script>
+                $("#selavata").change(function () {
+                    $(".avata").attr("src", $(this).val());
+                });
+            </script>
+
+            <input type="text" id="nickname" class="form-control" placeholder="닉네임입력">
+            <button type="button" class="btn btn-sm btn-success" id="btnsave">DB 저장</button>
+        </div>
+        <textarea id="content" style="width: 100%; height: 100px" placeholder="내용을 입력하세요"></textarea>
+        <hr>
+        <!--검색-->
+        <div class="input-group" style="margin-left: 100px; width: 300px;">
+            <b style="line-height: 40px;">닉네임 검색</b>
+            <input type="text" id="search" class="form-control" style="margin-left: 10px;">
+            <button type="button" class="btn btn-sm btn-info" id="btnsearch">검색</button>
+        </div>
+        <div class="guestlist">111</div>
+    </div>
+</div>
+</body>
+</html>

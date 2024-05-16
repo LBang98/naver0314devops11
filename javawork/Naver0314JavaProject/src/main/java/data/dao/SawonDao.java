@@ -88,12 +88,14 @@ public class SawonDao {
     public SawonDto getData(int num)
     {
         SawonDto dto=new SawonDto();
-        String sql="""
-				select * from mysawon where num=?
-				""";
+
         Connection conn=db.getConnection();
         PreparedStatement pstmt=null;
         ResultSet rs=null;
+
+        String sql="""
+				select * from mysawon where num=?
+				""";
 
         try {
             pstmt=conn.prepareStatement(sql);

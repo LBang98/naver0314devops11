@@ -29,6 +29,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ba242154-b66e-489b-b439-f8e590c23e8c" />
+        <option name="url" value="https://github.com/LBang98/naver0314devops11.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -53,7 +66,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17 (2)",
-    "last_opened_file_path": "/Users/ibyeonghyeon/Desktop/naver0314/workall/javawork/Naver0314JavaProject/web/image/talent",
+    "last_opened_file_path": "/Users/ibyeonghyeon/Desktop/naver0314/workall/javawork/Naver0314JavaProject/web/WEB-INF/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,7 +75,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.general",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -78,14 +91,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/image/talent" />
-      <recent name="$PROJECT_DIR$/web/WEB-INF" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/web/car" />
-      <recent name="$PROJECT_DIR$/web/shop" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
+      <recent name="$PROJECT_DIR$/web/project1/image.pro1/d" />
+      <recent name="$PROJECT_DIR$/web/project1/image.pro1/a" />
+      <recent name="$PROJECT_DIR$/web/project1/image.pro1/b" />
+      <recent name="$PROJECT_DIR$/web/project1/image.pro1/c" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/day0507/cookie" />
+      <recent name="$PROJECT_DIR$/web/day0507/session" />
+      <recent name="$PROJECT_DIR$/web/day0507" />
+      <recent name="$PROJECT_DIR$/web/project1" />
+      <recent name="$PROJECT_DIR$/web/day0425" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="day0408" />
@@ -305,7 +322,12 @@
       <workItem from="1714351271911" duration="2000" />
       <workItem from="1714351288121" duration="9455000" />
       <workItem from="1714362032413" duration="35236000" />
-      <workItem from="1714462793123" duration="28782000" />
+      <workItem from="1714462793123" duration="29609000" />
+      <workItem from="1714610203611" duration="13108000" />
+      <workItem from="1714626062774" duration="17571000" />
+      <workItem from="1714647939515" duration="36663000" />
+      <workItem from="1714789606363" duration="645000" />
+      <workItem from="1714790282513" duration="106061000" />
     </task>
     <servers />
   </component>
@@ -329,6 +351,11 @@
           <url>file://$PROJECT_DIR$/web/day0501/detail.jsp</url>
           <line>24</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/day0430/sawondetail.jsp</url>
+          <line>20</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
