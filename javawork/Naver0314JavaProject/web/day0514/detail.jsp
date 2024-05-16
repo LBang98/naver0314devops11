@@ -34,7 +34,7 @@
                 <b style="color:gray;clear: both;">조회 : ${dto.readcount}</b>
                 <b style="margin-left:10px;color:gray;">추천
                     &nbsp;<span class="chu">${dto.chu}</span></b>
-                &nbsp;
+                    &nbsp;
                 <i class="bi bi-hand-thumbs-up mychu"
                    style="font-size: 20px;cursor: pointer;"></i>
                 <br>
@@ -80,6 +80,19 @@
             location.href=`./delete?num=\${num}&currentPage=\${cp}`;
         }
     }
+    //추천 클릭 시 숫자 증가
+    $(".mychu").click(function (){
+        let num = ${dto.num};
+        $.ajax({
+            type:"get",
+            dataType:"json",
+            data:{"num":num},
+            url:"./updatechu",
+            success:function (data){
+                $("span.chu").text(data.chu);
+            }
+        });
+    });
 </script>
 </body>
 </html>
