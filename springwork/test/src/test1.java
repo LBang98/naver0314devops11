@@ -30,17 +30,19 @@ public class test1 {
             blist.add(d);
         }
 
-        for (int i = 0; i < alist.toArray().length; i++) {
-            for (int j = 0; j < blist.toArray().length; j++) {
 
-                if(alist.get(i) == blist.get(j)){
+        while (true){
+            for (int i = 0; i < alist.toArray().length; i++) {
+                for (int j = 0; j < blist.toArray().length; j++) {
 
-                    x = alist.get(i);
-                    break;
+                    if(alist.get(i) == blist.get(j)){
+
+                        x = alist.get(i);
+                        break;
+                    }
                 }
             }
         }
-
         System.out.println(x);
 
     }

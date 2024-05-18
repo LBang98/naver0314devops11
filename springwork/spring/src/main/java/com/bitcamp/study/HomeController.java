@@ -6,8 +6,10 @@ import java.util.Locale;
 import data.dto.ShopDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 
 /**
@@ -16,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+/*    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(Locale locale, Model model) {
 
         ShopDto dto1 = new ShopDto();
@@ -36,6 +38,32 @@ public class HomeController {
         model.addAttribute("msg","Hello SpringFramework!!!");
         model.addAttribute("today", new Date());
         return "index";
+    }*/
+
+    @GetMapping("/")
+    public String hello()
+    {
+        return "start";
     }
+    //Model 에 데이타를 저장하고 포워드 파일명을 리턴하는 두가지 방법
+
+
+    @GetMapping("/board/list") //board/list.do 도 해당 메서드가 호출
+    //@GetMapping("/board/list.do") //이경우는 /board/list.do 라고 정확히 써야만 호출
+    public String hello2(Model model)
+    {
+        model.addAttribute("msg", "안녕하세요 반가워요!!");
+        return "result1";
+    }
+
+    @GetMapping("/guest/list")
+    public ModelAndView hello3()
+    {
+        ModelAndView mview=new ModelAndView();
+        mview.addObject("today", new Date());
+        mview.setViewName("result2");
+        return mview;
+    }
+
 
 }
