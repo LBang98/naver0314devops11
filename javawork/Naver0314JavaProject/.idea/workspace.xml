@@ -9,7 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="" />
+    <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/category/ade.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/category/allmenu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/category/blended.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/users/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/users/loginform.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -336,6 +342,9 @@
       <workItem from="1715830407666" duration="14000" />
       <workItem from="1715830488550" duration="23000" />
       <workItem from="1715831510642" duration="958000" />
+      <workItem from="1716096747563" duration="644000" />
+      <workItem from="1716099551483" duration="152000" />
+      <workItem from="1716101286721" duration="24000" />
     </task>
     <servers />
   </component>
