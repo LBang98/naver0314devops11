@@ -39,10 +39,10 @@ public class UploadOneController {
         // 그래서 랜덤 파일명으로 업로드를 해보자
         String fileName=UUID.randomUUID()+".jpg";
 
-        /*File uploadDir = new File(realFolder);
+        File uploadDir = new File(realFolder);
         if (!uploadDir.exists()) {
             uploadDir.mkdirs();
-        }*/
+        }
 
 
         // 위의 경로에 해당 파일명으로 업로드 해보자
