@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: minseok
@@ -19,12 +20,95 @@
             font-family: 'Jua';
         }
     </style>
+    <script type="text/javascript">
+        $(function (){
+            //사진변경 이벤트
+            $("#photoupload").change(function (){
+                let form = new FormData;
+                form.append("upload", $("#photoupload")[0].files[0]);
+                form.append("num", ${dto.num});
+
+                $.ajax({
+                    type:"post",
+                    dataType:"json",
+                    data:form,
+                    url:"./upload",
+                    processData:false,
+                    contentType:false,
+                    success:function (data){
+                        //스프링에서 {"photoname":파일명}
+                        $("photo").attr("src","../image/"+data.photoname);
+                    }
+
+                });
+
+            });
+
+        }); //end function
+
+
+    </script>
+
     <title>Title</title>
 </head>
 <body>
-<h1>member detail</h1>
-<div>
-    <img src="" alt="">
-</div>
+<TABLE CLASS="TABLE table-stripped" style="width: 500px; margin: 20px;">
+    <caption align="top">
+        <h2><b>${dto.name} 회원님의 정보확인</b></h2>
+    </caption>
+    <tr>
+        <td width="200" align="center">
+            <img src="/img/${dto.photo}" id="photo" class="rounded-circle" style="width: 150px; border: black 1px">
+            <br><br>
+            <input type="file" id="photoupload" style="display: none;">
+
+            <button type="button" class="btn btn-success btn-sm" onclick="$('#photoupload').trigger('click')">사진수정</button>
+
+        </td>
+        <td valign="middle">
+            아이디 : ${dto.myid}<br>
+            핸드폰 : ${dto.hp} <br>
+            이메일 : ${dto.email} <br>
+            주 소 : ${dto.addr} <br>
+            생년월일 : ${dto.birthday}<br>
+            가입일 :
+            <fmt:formatDate value="${dto.gaipday}" pattern="yyyy-MM-dd HH:mm"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <button type="button" class="btn btn-sm btn-outline-secondary" style="width: 80px;" onclick="location.href='./list'">목록</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" style="width: 80px;" onclick="location.href='./updateform?num=${dto.num}'">수정</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" style="width: 80px;" onclick="del(${dto.num})">삭제</button>
+
+            <script type="text/javascript">
+                function del(num){
+                    //비밀번호 입력받기
+                    let passwd = prompt("비밀번호를 입력해주세요");
+                    $.ajax({
+                        type: "get",
+                        dataType: "json",
+                        url: "./delete1",
+                        data:{"num": num, "passwd":passwd},
+                        success:function (data){
+                            if(data.status == 'success'){
+                                alert("삭제되었습니다");
+                                location.href="./list";
+                            }
+                            else {
+                                alert("비밀번호가 맞지 않습니다");
+                            }
+                        }
+                    });
+                }
+
+
+            </script>
+
+
+        </td>
+    </tr>
+</TABLE>
+
 </body>
 </html>

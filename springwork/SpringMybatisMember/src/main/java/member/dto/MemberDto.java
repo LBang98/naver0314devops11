@@ -18,5 +18,5 @@ public class MemberDto {
     private String email;
     private String photo;
     private String birthday;
-    private Timestamp registday;
+    private Timestamp gaipday;
 }

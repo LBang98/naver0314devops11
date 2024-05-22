@@ -76,7 +76,6 @@ public class MemberWriteController {
         try {
             myfile.transferTo(new File(uploadPath+"/"+photo));
         } catch (IllegalStateException | IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

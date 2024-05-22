@@ -36,60 +36,72 @@
 </head>
 <body>
 <h1>input form</h1>
-<div>
+
+<div style="width: 800px;">
+
     <form action="/member/insert" method="post" onsubmit="form()" enctype="multipart/form-data">
-        <table>
+        <table class="table table-bordered" width="300">
             <tr>
-                <th>이름</th>
-                <td><input type="text" name="name" id="name" required></td>
+                <th style="width: 40px;" class="table-info">이름</th>
+                <td colspan="2"><input type="text" name="name" id="name" required></td>
             </tr>
             <tr>
-                <th>아이디</th>
-                <td><input type="text" name="myid" id="myid" required><br>
-                    <span class="id_ok">사용 가능한 아이디입니다.</span>
+                <th style="width: 40px;" class="table-info">아이디</th>
+                <td colspan="2">
+                    <div class="input-group">
+                        <input type="text" name="myid" id="myid" required>
+                        &nbsp;
+                        <button type="button" class="btn btn-outline-danger" id="id-check">중복확인</button>
+                        <span class="id_ok">사용 가능한 아이디입니다.</span>
                     <span class="id_already">누군가 이 아이디를 사용하고 있어요.</span>
+                    </div>
                 </td>
+            </tr>
+            <tr>
+                <th style="width: 40px;"  class="table-info">사진</th>
+                <td width="200">
+                    <input type="file" name="photofile" id="photofile" class="form-control"
+                           required="required" >
+                </td>
+                <td rowspan="2" width="50px">
+                <img src="" id="showimg1" style="width: 100%;"
+                     onerror="this.src='../img/noimage1.png'">
+                </td>
+            </tr>
+            <tr>
+                <th style="width: 40px;" class="table-info">비밀번호</th>
                 <td>
-                    <button type="button" class="btn-sm btn-danger" id="id-check">중복확인</button>
+                    <input type="password" name="passwd" id="passwd" required>
                 </td>
             </tr>
             <tr>
-                <th>비밀번호</th>
-                <td><input type="text" name="passwd" id="passwd" required></td>
+                <th style="width: 40px;" class="table-info">주소</th>
+                <td colspan="2"><input type="text" name="addr" id="addr" required></td>
             </tr>
             <tr>
-                <th>주소</th>
-                <td><input type="text" name="addr" id="addr" required></td>
+                <th style="width: 40px;" class="table-info">핸드폰</th>
+                <td width="200" colspan="2">
+                    <input type="tel" name="hp" id="hp" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="xxx-xxxx-xxxx">
+                </td>
             </tr>
             <tr>
-                <th>핸드폰</th>
-                <td><input type="text" name="hp" id="hp" required></td>
+                <th style="width: 40px;" class="table-info">이메일</th>
+                <td colspan="2"><input type="email" name="email" id="email" required></td>
             </tr>
             <tr>
-                <th>이메일</th>
-                <td><input type="email" name="email" id="email" required></td>
+                <th style="width: 40px;" class="table-info">생일</th>
+                <td colspan="2"><input type="date" name="birthday" id="birthday" required></td>
             </tr>
-            <tr>
-                <th>생일</th>
-                <td><input type="date" name="birthday" id="birthday" required></td>
-            </tr>
-            <tr>
-                <th>사진</th>
-                <td><input type="file" name="photofile" id="photofile" onchange="preview(this)"></td>
-            </tr>
-            <tr>
-                <th colspan="100%">
-                    <button>전송</button>
-                    <button type="reset">초기화</button>
+
+            <tr class="3" align="center">
+                <th colspan="100%" >
+                    <button class="btn btn-outline-danger">전송</button>
+                    <button class="btn btn-outline-danger" type="reset">초기화</button>
                 </th>
             </tr>
         </table>
     </form>
 </div>
-<img src="" id="showimg1"
-     style="max-width:300px;">
-
-
 <script>
     function preview(tag) {
         if (tag.files[0]) {

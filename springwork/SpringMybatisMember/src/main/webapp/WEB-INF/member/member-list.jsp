@@ -23,33 +23,37 @@
         멤버등록
     </span>
 </h5>
-<div>
-    <table>
-        <tr>
-            <th>번호</th>
-            <th>이름</th>
-            <th>아이디</th>
-            <th>핸드폰</th>
-            <th>상세보기</th>
-            <th>삭제</th>
+
+    <table class="table table-bordered" width="500">
+        <caption align="top">
+            <h3><b>회원명단</b></h3>
+        </caption>
+        <tr class="table-danger" align="center">
+            <th width="50">번호</th>
+            <th width="120">이름</th>
+            <th width="100">아이디</th>
+            <th width="120">핸드폰</th>
+            <th width="30">상세보기</th>
+            <th width="30">삭제</th>
         </tr>
         <c:forEach items="${memberList}" var="member" varStatus="i">
-            <tr class="member-data">
-                <td>${member.num}</td>
-                <td>${member.name}</td>
-                <td>${member.myid}</td>
-                <td>${member.hp}</td>
+            <tr align="center">
+                <td style="line-height: 50px;">${member.num}</td>
+                <td style="line-height: 50px;">
+                    <img src="/img/${member.photo}" class="rounded-circle" style="width: 30px; border: black 1px;">
+                ${member.name}
+                </td>
+                <td style="line-height: 50px;">${member.myid}</td>
+                <td style="line-height: 50px;">${member.hp}</td>
                 <td>
-                    <button onclick="location.href='./detail?num=${member.num}'">Detail</button>
+                    <button type="button" class="btn btn-sm btn-info" onclick="location.href='./detail?num=${member.num}'">Detail</button>
                 </td>
                 <td>
-                    <button onclick="deleteMember('${member.name}', ${member.num}, ${i.index})">삭제</button>
+                    <button type="button" class="btn btn-sm btn-info" onclick="deleteMember('${member.name}', ${member.num}, ${i.index})">삭제</button>
                 </td>
             </tr>
         </c:forEach>
-
     </table>
-</div>
 
 
 <script>

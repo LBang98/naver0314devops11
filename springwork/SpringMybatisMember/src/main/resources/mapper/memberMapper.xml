@@ -18,7 +18,7 @@
     </select>
 
     <insert id="insertMember" parameterType="member.dto.MemberDto">
-        insert into memberdb (name, myid, passwd, addr, hp, email, photo, birthday, registday)
+        insert into memberdb (name, myid, passwd, addr, hp, email, photo, birthday, gaipday)
         values (#{name}, #{myid}, #{passwd}, #{addr}, #{hp}, #{email}, #{photo}, #{birthday}, now())
     </insert>
 
@@ -28,7 +28,22 @@
         where num = #{num}
     </select>
 
+    <select id="selectByNumData" parameterType="int" resultType="MemberDto">
+        select * from memberdb where num=#{num}
+    </select>
+
     <delete id="deleteByNum" parameterType="int">
         DELETE FROM memberdb WHERE num = #{num}
     </delete>
+
+    <update id="updatePhoto" parameterType="Map">
+        update memberdb set photo=#{photo} where num=#{num}
+    </update>
+
+    <update id="updateMember" parameterType="MemberDto">
+        update memberdb set name=#{name}, passwd=#{passwd}, hp=#{hp}, email=#{email}, addr=#{addr}, birthday=#{birthday} where num=#{num}
+    </update>
+    <select id="equalCheck" parameterType="Map" resultType="int">
+        select count(*) from memberdb where num=#{num} and passwd=#{passwd}
+    </select>
 </mapper>
