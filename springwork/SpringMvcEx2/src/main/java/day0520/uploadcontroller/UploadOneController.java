@@ -30,7 +30,6 @@ public class UploadOneController {
     ) {
         // 톰캣서버에 배포된 프로젝트에서 이미지가 업로드될 경로 구하기
         String realFolder = request.getSession().getServletContext().getRealPath("/resources/upload");
-        System.out.println(realFolder); // 콘솔로 출력 후 탐색기를 열어서 이미지를 확인해주세요
 
         // 업로드할 파일명
         //String fileName = upload.getOriginalFilename();
@@ -39,16 +38,11 @@ public class UploadOneController {
         // 그래서 랜덤 파일명으로 업로드를 해보자
         String fileName=UUID.randomUUID()+".jpg";
 
-        File uploadDir = new File(realFolder);
-        if (!uploadDir.exists()) {
-            uploadDir.mkdirs();
-        }
 
-
+        System.out.println(realFolder + "/" + fileName); // 콘솔로 출력 후 탐색기를 열어서 이미지를 확인해주세요
         // 위의 경로에 해당 파일명으로 업로드 해보자
         try {
-            File destinationFile = new File(realFolder, fileName);
-            upload.transferTo(destinationFile);
+            upload.transferTo(new File(realFolder + "/" + fileName));
             // 업로드시 오류가 없다면 model에 저장
             model.addAttribute("title", title);
             model.addAttribute("photo", fileName);

@@ -23,7 +23,7 @@
     <h4>제목을 입력해주세요</h4>
     <input type="text" name="title">
     <h4>사진 한장을 업로드해주세요</h4>
-    <input type="file" name="upload">
+    <input type="file" name="upload" id="upload">
     <br>
     <button type="submit">제목과 사진 업로드</button>
 </form>

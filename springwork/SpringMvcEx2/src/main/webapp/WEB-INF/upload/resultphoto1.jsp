@@ -19,6 +19,6 @@
 </head>
 <body>
 <h1>제목 : ${title}</h1>
-<img src="./upload/${photo}" style="max-width: 300px;">
+<img src="/upload/${photo}" style="max-width: 300px;">
 </body>
 </html>
