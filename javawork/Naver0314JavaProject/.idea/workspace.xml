@@ -10,11 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/category/ade.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/category/allmenu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/category/blended.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/users/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../springwork/project1/src/main/resources/templates/users/loginform.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/java/com/example/coffee/model/dto/usersDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/cart/cart.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/category/ade.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/category/allmenu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/category/blended.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/category/coffee.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/category/dessert.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/review/review.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/review/reviewform.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/users/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/users/loginform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMybatisMember/src/main/webapp/WEB-INF/member/member-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMybatisMember/src/main/webapp/WEB-INF/member/member-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/SpringMybatisMember/target/mybatis-1.0.0-BUILD-SNAPSHOT/WEB-INF/member/member-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/SpringMybatisMember/target/mybatis-1.0.0-BUILD-SNAPSHOT/WEB-INF/member/member-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/ok.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../springwork/coffee/src/main/resources/templates/home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,6 +355,8 @@
       <workItem from="1716096747563" duration="644000" />
       <workItem from="1716099551483" duration="152000" />
       <workItem from="1716101286721" duration="24000" />
+      <workItem from="1716366778507" duration="170000" />
+      <workItem from="1716367522414" duration="10000" />
     </task>
     <servers />
   </component>

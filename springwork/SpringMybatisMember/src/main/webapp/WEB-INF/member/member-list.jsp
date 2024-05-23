@@ -45,10 +45,10 @@
                 </td>
                 <td style="line-height: 50px;">${member.myid}</td>
                 <td style="line-height: 50px;">${member.hp}</td>
-                <td>
+                <td style="line-height: 80px;">
                     <button type="button" class="btn btn-sm btn-info" onclick="location.href='./detail?num=${member.num}'">Detail</button>
                 </td>
-                <td>
+                <td style="line-height: 80px;">
                     <button type="button" class="btn btn-sm btn-info" onclick="deleteMember('${member.name}', ${member.num}, ${i.index})">삭제</button>
                 </td>
             </tr>
