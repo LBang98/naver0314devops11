@@ -14,9 +14,22 @@
         body * {
             font-family: 'Jua';
         }
+        pre.info{
+            font-size: 20px;
+            border: 10px solid orange;
+            border-radius: 40px;
+            padding: 10px 10px;
+            background-color: #fde5bc;
+        }
     </style>
 
 </head>
 <body>
+<pre class="info">
+    <i class="bi bi-shop-window"></i>&nbsp;비트캠프
+    <i class="bi bi-person-circle"></i>&nbsp;대표 : 이병현
+    <i class="bi bi-phone-fill"></i>&nbsp;010-2233-4455
+    <i class="bi bi-cart4"></i>&nbsp;당일배송
+</pre>
 </body>
 </html>
