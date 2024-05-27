@@ -16,10 +16,10 @@
         }
         pre.info{
             font-size: 20px;
-            border: 10px solid orange;
+            border: 10px solid #34e1ff;
             border-radius: 40px;
             padding: 10px 10px;
-            background-color: #fde5bc;
+            background-color: #a0fcfc;
         }
     </style>
 

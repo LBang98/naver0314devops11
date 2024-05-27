@@ -9,7 +9,7 @@ import java.util.Map;
 @Mapper
 public interface MemberMapperInter {
 
-   // @Select("SELECT COUNT(*) FROM memberdb")
+    // @Select("SELECT COUNT(*) FROM memberdb")
     public int getTotalCount();
 
     @Select("select count(*) from memberdb where myid=#{searchid}")
@@ -27,8 +27,11 @@ public interface MemberMapperInter {
     @Select("select * from memberdb where num=#{num}")
     public MemberDto getData(int num);
 
+    @Select("select * from memberdb where myid=#{myid}")
+    public MemberDto getDataById(String myid);
+
     @Update("update memberdb set photo=#{photo} where num=#{num}")
-    public void updatePhoto(Map<String,Object> map);
+    public void updatePhoto(Map<String, Object> map);
 
     @Update("update memberdb set name=#{name}, hp=#{hp}, email=#{email}, addr=#{addr}, birthday=#{birthday} where num=#{num}")
     public void updateMember(MemberDto dto);
@@ -37,7 +40,7 @@ public interface MemberMapperInter {
     public void deleteMember(int num);
 
     @Select("select count(*) from memberdb where num=#{num} and passwd=#{passwd}")
- public int isEqualPassCheck(Map<String, Object> map);
+    public int isEqualPassCheck(Map<String, Object> map);
 
     @Select("""
             select count(*) from memberdb where myid=#{myid} and passwd=#{pass}
