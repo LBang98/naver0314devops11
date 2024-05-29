@@ -9,7 +9,7 @@ import java.util.Map;
 @Mapper
 public interface MemberMapperInter {
 
-    // @Select("SELECT COUNT(*) FROM memberdb")
+     @Select("SELECT COUNT(*) FROM memberdb")
     public int getTotalCount();
 
     @Select("select count(*) from memberdb where myid=#{searchid}")
