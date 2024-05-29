@@ -10,50 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a446219c-4981-46e4-a71a-e881e0699923" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/a/a1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/a/a2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/a/a3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/a/a4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/a/a5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/a/a6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/a/a7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/a/a8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/b/b1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/b/b2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/b/b3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/b/b4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/b/b5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/b/b6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/b/b7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/b/b8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/c/c1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/c/c2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/c/c3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/c/c4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/c/c5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/c/c6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/c/c7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/c/c8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/d/d1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/d/d2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/d/d3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/d/d4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/d/d5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/d/d6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/d/d7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/resources/static/image.pro1/d/d8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/ade.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/allmenu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/blended.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/cart.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/coffee.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/dessert.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/loginform.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/review.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/beforejsp/reviewform.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bootwork/coffee/src/main/webapp/WEB-INF/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bootwork/demo/src/main/java/controller/board/BoardAnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bootwork/demo/src/main/java/controller/board/BoardAnswerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bootwork/demo/src/main/java/controller/board/BoardDetailDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bootwork/demo/src/main/java/controller/board/BoardDetailDeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bootwork/demo/src/main/java/data/dto/BoardAnswerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bootwork/demo/src/main/java/data/dto/BoardAnswerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bootwork/demo/src/main/webapp/WEB-INF/board/detailpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../bootwork/demo/src/main/webapp/WEB-INF/board/detailpage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +25,11 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="Jsp File" />
         <option value="Class" />
         <option value="bit701" />
         <option value="package-info" />
         <option value="spring-beans.schema" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -387,6 +347,8 @@
       <workItem from="1716366778507" duration="170000" />
       <workItem from="1716367522414" duration="10000" />
       <workItem from="1716818428247" duration="128000" />
+      <workItem from="1716950474972" duration="119000" />
+      <workItem from="1716958320413" duration="85000" />
     </task>
     <servers />
   </component>

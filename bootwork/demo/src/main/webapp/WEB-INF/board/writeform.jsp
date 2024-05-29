@@ -26,12 +26,12 @@
     </style>
 
 </head>
-<c:if test="${sessionScope.loginok == null}">
+<%--<c:if test="${sessionScope.loginok == null}">
     <script type="text/javascript">
         alert("먼저 로그인 후 글을 작성해주세요");
         history.back();
     </script>
-</c:if>
+</c:if>--%>
 <script type="text/javascript">
     $(function() {
         $("#upload").change(function () {

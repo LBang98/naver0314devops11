@@ -26,6 +26,8 @@ public class MemberUpdateController {
     @NonNull
     private MemberService memberService;
 
+
+
     @ResponseBody
     @GetMapping("/upload")
     public Map<String,String> uploadPhoto(

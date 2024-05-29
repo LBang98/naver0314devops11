@@ -28,6 +28,7 @@
     </style>
 
 </head>
+<c:set var="stpath" value="https://kr.object.ncloudstorage.com/bitcamp-bucket-56/photocommon"/>
 <c:if test="${sessionScope.loginok == null}">
     <script type="text/javascript">
         alert("먼저 로그인 후 글을 작성해주세요");
@@ -91,7 +92,7 @@
         </table>
     </div>
     <br><br><b>사진을 선택하지 않으면 기존사진이 유지됩니다</b><br>
-        <img src="../save/${dto.uploadphoto}" id="showimg" onerror="this.src='../image/noimage1.png'">
+        <img src="${stpath}/${dto.uploadphoto}" id="showimg" onerror="this.src='../image/noimage1.png'">
 </form>
 </body>
 </html>

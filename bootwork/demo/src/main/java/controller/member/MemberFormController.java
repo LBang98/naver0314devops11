@@ -2,6 +2,7 @@ package controller.member;
 
 import data.dto.MemberDto;
 import data.service.MemberService;
+import naver.cloud.NcpObjectStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,13 @@ public class MemberFormController {
 
     @Autowired
     private MemberService memberService;
+
+    private String bucketName = "bitcamp-bucket-56";
+    private String folderName = "photocommon";
+
+    @Autowired
+    private NcpObjectStorageService storageService;
+
 
     @GetMapping("/member/form")
     public String form(){
@@ -47,7 +55,7 @@ public class MemberFormController {
             )
     {
         //업로드될 경로
-        String savePath = request.getSession().getServletContext().getRealPath("/save");
+        /*String savePath = request.getSession().getServletContext().getRealPath("/save");
 
         //업로드한 파일의 확장자 분리
         String ext = myfile.getOriginalFilename().split("\\.")[1];
@@ -61,7 +69,13 @@ public class MemberFormController {
             myfile.transferTo(new File(savePath+"/"+photo));
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }*/
+
+        //스토리지에 업로드하기
+        String photo = storageService.uploadFile(bucketName, folderName, myfile);
+        dto.setPhoto(photo);    //업로드된 UUID 파일명을 dto에 저장
+
+
         //db에 저장
         memberService.insertMember(dto);
 

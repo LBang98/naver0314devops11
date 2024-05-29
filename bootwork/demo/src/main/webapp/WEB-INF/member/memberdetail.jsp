@@ -20,6 +20,8 @@
             margin-left: 300px;
         }
     </style>
+    <c:set var="stpath" value="https://kr.object.ncloudstorage.com/bitcamp-bucket-56/photocommon"/>
+
     <script type="text/javascript">
         $(function(){
             //사진변경 이벤트
@@ -43,7 +45,7 @@
                     success:function(data){
                         //스프링에서 {"photoname":"파일명"} 이렇게 보낼것임
                         //프로필 사진 변경(db 변경후 업로드된 사진파일명을 반환받은것으로 변경)
-                        $("#photo").attr("src","../save/"+data.photoname);
+                        $("#photo").attr("src","${stpath}/"+data.photoname);
                     }
                 });
             });
@@ -58,7 +60,7 @@
     </caption>
     <tr>
         <td width="200" align="center">
-            <img src="../save/${dto.photo}" id="photo"  onerror="this.src='../image/noimage1.png'"
+            <img src="${stpath}/${dto.photo}" id="photo"  onerror="this.src='../image/noimage1.png'"
                  class="rounded-circle" style="width:150px;border:1px solid black;">
             <br><br>
             <input type="file" id="photoupload" style="display: none;">

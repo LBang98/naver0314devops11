@@ -25,11 +25,15 @@
 <body>
 <div class="a">
     <!-- 글쓰기 버튼은 로그인을 해야만 보인다 -->
+<%--
     <c:if test="${sessionScope.loginok != null}">
+--%>
         <button type="button" class="btn btn-outline-secondary" style="width: 100px; margin: 20px;"
                 onclick="location.href='./form'">글 쓰기
         </button>
+<%--
     </c:if>
+--%>
     <h5>총 ${totalCount}개의 글이 있습니다</h5>
     <table class="table table-striped" style="width: 600px;">
         <tr class="table-danger">

@@ -12,10 +12,18 @@ spring:
 
 #mysql setting
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/bit701?useSSL=false&serverTimezone=UTC
-    username: root
-    password: system
+ #   driver-class-name: com.mysql.cj.jdbc.Driver
+ #   url: jdbc:mysql://localhost:3306/bit701?useSSL=false&serverTimezone=UTC
+ #   username: root
+ #   password: system
+
+#gangsa mysql setting
+     driver-class-name: com.mysql.cj.jdbc.Driver
+     url: jdbc:mysql://db-n8650-kr.vpc-pub-cdb.ntruss.com:3306/studydb?useSSL=false&serverTimezone=UTC
+     username: study
+     password: bitcamp!@#123
+
+
 
 #mybatis setting
 mybatis:
