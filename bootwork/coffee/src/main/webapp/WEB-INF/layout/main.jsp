@@ -17,24 +17,8 @@
             font-family: 'Jua';
         }
 
-        div.mainphoto img{
-            width:500px;
-            width: 200px;
-            height: 200px;
-            border: 1px solid gray;
-            margin-left: 80px;
-            margin-bottom: 30px;
-        }
     </style>
 </head>
-<div class="mainphoto">
-    <!-- <marquee direction="right" behavior="scroll"> -->
-    <%
-        for (int i = 1; i < 13; i++) {%>
-    <img src="./image/mycar/mycar<%=i%>.png">
-    <%}
-    %>
-    <!-- </marquee> -->
 
 </div>
 </body>

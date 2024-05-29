@@ -8,15 +8,22 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
-import data.dto.MemberDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import data.dto.MemberDto;
 import data.service.MemberService;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import naver.cloud.NcpObjectStorageService;
 
 @Controller
 @RequiredArgsConstructor
@@ -26,28 +33,36 @@ public class MemberUpdateController {
     @NonNull
     private MemberService memberService;
 
+    private String bucketName="bitcamp-bucket-56";
+    private String folderName="photocommon";
 
+    @Autowired
+    private NcpObjectStorageService storageService;
 
     @ResponseBody
-    @GetMapping("/upload")
+    @PostMapping("/upload")
     public Map<String,String> uploadPhoto(
             @RequestParam("upload") MultipartFile upload,
             @RequestParam int num,
             HttpServletRequest request
     )
     {
-        String savePath=request.getSession().getServletContext().getRealPath("/save");
-        //업로드한 파일의 확장자 분리
-        String ext=upload.getOriginalFilename().split("\\.")[1];
-        //업로드할 파일명
-        String photo=UUID.randomUUID()+"."+ext;
+        //		String savePath=request.getSession().getServletContext().getRealPath("/save");
+        //		//업로드한 파일의 확장자 분리
+        //		String ext=upload.getOriginalFilename().split("\\.")[1];
+        //		//업로드할 파일명
+        //		String photo=UUID.randomUUID()+"."+ext;
+        //
+        //		//실제 업로드
+        //		try {
+        //			upload.transferTo(new File(savePath+"/"+photo));
+        //		} catch (IllegalStateException | IOException e) {
+        //			// TODO Auto-generated catch block
+        //			e.printStackTrace();
+        //		}
 
-        //실제 업로드
-        try {
-            upload.transferTo(new File(savePath+"/"+photo));
-        } catch (IllegalStateException | IOException e) {
-            e.printStackTrace();
-        }
+        //스토리지에 업로드하기
+        String photo=storageService.uploadFile(bucketName, folderName, upload);
 
         //db 에서 photo 수정
         memberService.updatePhoto(num, photo);
@@ -56,6 +71,7 @@ public class MemberUpdateController {
         map.put("photoname", photo);
         return map;
     }
+
     //수정폼-이름,핸드폰,이메일,주소,생년월일 만 폼에 나타나도록
     @GetMapping("/updateform")
     public String updateForm(@RequestParam int num,Model model)
@@ -63,7 +79,7 @@ public class MemberUpdateController {
         //db로부터 dto 얻기
         MemberDto dto=memberService.getData(num);
         model.addAttribute("dto", dto);
-        return "member/memberupdate";
+        return "member/updateform";
     }
     //수정후 디테일 페이지로 이동
     @PostMapping("/update")
@@ -88,5 +104,4 @@ public class MemberUpdateController {
         map.put("status", b?"success":"fail");
         return map;
     }
-
 }

@@ -18,9 +18,38 @@
 
 </head>
 <body>
-<c:set var="root" value="<%=request.getContextPath()%>"/>
-<a href="${root}/">
-    <img src="${root}/mycar/mycar13.png" width="60">
-    스프링부트와 JSP를 이용한 프로젝트</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#">뱅뱅 커피</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.jsp">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="review.jsp">Review</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./allmenu.jsp">전 메뉴</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="./coffee.jsp">커피</a></li>
+                        <li><a class="dropdown-item" href="./blended.jsp">블렌디드</a></li>
+                        <li><a class="dropdown-item" href="ade.jsp">에이드&주스</a></li>
+                        <li><a class="dropdown-item" href="./dessert.jsp">디저트</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex" action="cart.jsp" method="get">
+                <button class="btn btn-outline-dark" type="submit" onclick="location.href='cart.jsp'">
+                    <i class="bi bi-cart-check-fill"></i> 장바구니
+<%--
+                    <span class="badge bg-dark text-white ms-1 rounded-pill"><%=dao.countItem()%></span>
+--%>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
 </body>
 </html>

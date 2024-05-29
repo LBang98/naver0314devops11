@@ -2,6 +2,8 @@ package controller.board;
 
 import javax.servlet.http.HttpServletRequest;
 
+import naver.cloud.NcpObjectStorageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +30,13 @@ public class BoardUpdateController {
     @NonNull
     private ReBoardService boardService;
 
+    @Autowired
+    private NcpObjectStorageService storageService;
+
+    private String bucketName="bitcamp-bucket-56";
+    private String folderName="photocommon";
+
+
     @GetMapping("/updateform")
     public String updateForm(
             @RequestParam int num,
@@ -49,7 +58,7 @@ public class BoardUpdateController {
                          @RequestParam int currentPage,
                          HttpServletRequest request)
     {
-        //업로드 경로
+/*        //업로드 경로
         String saveFolder = request.getSession().getServletContext().getRealPath("/save");
         //업로드 안했을경우 null값 보내서 수정시 컬럼 제외
         String uploadphoto = null;
@@ -64,10 +73,12 @@ public class BoardUpdateController {
                 throw new RuntimeException(e);
             }
 
-        }
-        //dto의 사진변경
+        }*/
+
+        String uploadphoto=storageService.uploadFile(bucketName, folderName, upload);
+        //dto 의 사진변경
         dto.setUploadphoto(uploadphoto);
-        //사진 수정
+        //수정
         boardService.updateBoard(dto);
 
         return "redirect:./detail?num="+dto.getNum()+"&currentPage="+currentPage;

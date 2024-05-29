@@ -91,6 +91,7 @@
                     style="width: 80px;"
                     onclick="location.href='./updateform?num=${dto.num}'">수정</button>
 
+
             <button type="button" class="btn btn-sm btn-outline-secondary"
                     style="width: 80px;"
                     onclick="del(${dto.num})">삭제</button>
@@ -110,7 +111,7 @@
                             if(data.status=='success'){
                                 alert("삭제되었습니다");
                                 //목록으로 이동
-                                location.href="./memberlist.jsp";
+                                location.href="./list";
                             }else{
                                 alert("비밀번호가 맞지 않습니다");
                             }
