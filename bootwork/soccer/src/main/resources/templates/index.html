@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Matches</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Live Football Matches</h1>
+<div id="matches"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('http://localhost:8080/api/fixtures')
+            .then(response => response.json())
+            .then(data => {
+              const matchesContainer = document.getElementById('matches');
+              data.response.forEach(match => {
+                const matchDiv = document.createElement('div');
+                matchDiv.className = 'match';
+                matchDiv.innerHTML = `
+                            <h3>${match.teams.home.name} vs ${match.teams.away.name}</h3>
+                            <p>Date: ${new Date(match.fixture.date).toLocaleString()}</p>
+                            <p>Status: ${match.fixture.status.short}</p>
+                        `;
+                matchesContainer.appendChild(matchDiv);
+              });
+            })
+            .catch(error => console.error('Error:', error));
+  });
+</script>
+</body>
+</html>
