@@ -1,13 +1,13 @@
-package com.example.soccer;
+package com.example.bootjpaex1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SoccerApplicationTests {
+class BootJpaEx1ApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
