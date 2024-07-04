@@ -27,8 +27,7 @@ spring:
     #database: mysql
     #Mysql 상세지정
     #database-platform: org.hibernate.dialect.MySQLDialect
-    open-in-view: false
+    open-in-view: true
 
   thymeleaf:
     cache: false
-    prefix: file:src/main/resources/templates/

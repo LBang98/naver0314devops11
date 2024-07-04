@@ -21,9 +21,27 @@ public class MyCarDao {
 
     //전체목록
     public List<MycarDto> getAllCars(){
-        return daoInter.findAll();   //추가된 순서로 반환
+        //return daoInter.findAll();   //추가된 순서로 반환
         //return daoInter.findAll(Sort.by(Sort.Direction.DESC, "carprice"));   //가격 내림차순
         //return daoInter.findAll(Sort.by(Sort.Direction.ASC, "carname"));   //자동차명 오름차순
+        return daoInter.findAll(Sort.by(Sort.Direction.DESC, "num"));   //num의 내림차순
+    }
+
+    public MycarDto getData(Long num){
+        return daoInter.getReferenceById(num);
+
+    }
+    public void updateCar(MycarDto dto){
+
+        if(dto.getCarphoto().equals("no"))
+            daoInter.updateMycarNoPhoto(dto.getNum(), dto.getCarname(), dto.getCarprice(), dto.getCarcolor());
+        else
+            daoInter.save(dto); //num이 포함되어있을경우 모든 컬럼 수정
+    }
+
+    public void delete(Long num){
+
+        daoInter.deleteById(num);
     }
 
 
