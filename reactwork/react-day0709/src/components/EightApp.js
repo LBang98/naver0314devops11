@@ -14,6 +14,32 @@ const EightApp = () => {
             <Alert>EightApp-table 을 이용해서 출력</Alert>
             {/* 번호 ,사진(class smallphoto 적용),이름,나이,주소 순으로 출력 */}
 
+            <table className={"table table-bordered"} style={{width:'400px'}}>
+                <thead>
+                <tr className={'table-danger'}>
+                    <th style={{width:'50px'}}>번호</th>
+                    <th style={{width:'70'}}>사진</th>
+                    <th style={{width:'100px'}}>이름</th>
+                    <th style={{width:'80px'}}>나이</th>
+                    <th style={{width:'60px'}}>주소</th>
+                </tr>
+                </thead>
+                <tbody>
+                {
+                    personArray.map((person, idx)=>
+                    <tr key={idx}>
+                        <td align={'center'}>{idx+1}</td>
+                        <td align={'center'}>
+                            <img src={require(`../image/${person.photo}`)} alt="" className={'smallphoto'}/>
+                        </td>
+                        <td>{person.pname}</td>
+                        <td>{person.age}세</td>
+                        <td>{person.addr}</td>
+                    </tr>
+                    )
+                }
+                </tbody>
+            </table>
 
         </div>
     );

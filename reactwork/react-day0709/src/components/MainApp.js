@@ -25,6 +25,7 @@ const MainApp = () => {
                 <option value={5}>FiveApp</option>
                 <option value={6}>SixApp</option>
                 <option value={7}>SevenApp</option>
+                <option value={8}>EightApp</option>
             </select>
             <br/>
             {
