@@ -2,7 +2,7 @@ import { Alert } from '@mui/material';
 import React, { useRef } from 'react';
 import cate from '../data/CateData.json';
 import './MyStyle.css';
-import errorImg from '../image/noimage2.png';
+import errorImg from '../image/34.jpg';
 
 const ThreeApp = () => {
     //json 데이타 가져오기
