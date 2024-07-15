@@ -19,4 +19,19 @@ public class MyCarService {
         return myCarDao.getAllDatas();
     }
 
+    public void insertMycar(MycarDto dto)
+    {
+        myCarDao.insertMycar(dto);
+    }
+    public void deleteMycar(long num){
+        myCarDao.deleteMycar(num);
+    }
+
+    public MycarDto getData(Long num){
+
+        return myCarDao.getData(num);
+    }
+
+
+
 }
