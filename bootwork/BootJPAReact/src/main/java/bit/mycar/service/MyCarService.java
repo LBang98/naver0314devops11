@@ -31,6 +31,11 @@ public class MyCarService {
 
         return myCarDao.getData(num);
     }
+    public void updateMycar(MycarDto dto){
+
+        myCarDao.updateMycar(dto);
+    }
+
 
 
 
