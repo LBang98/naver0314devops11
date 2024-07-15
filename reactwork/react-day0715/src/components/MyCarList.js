@@ -39,6 +39,14 @@ const MyCarList = () => {
             })
     }
 
+    //수정
+    const updateMycar=(data)=>{
+        Axios.post("/mycar/update", data)
+            .then(res=>{
+                //수정 성공 후 목록 다시 출력
+                myCarList();
+            })
+    }
 
     return (
         <div>
@@ -66,7 +74,8 @@ const MyCarList = () => {
                 <tbody>
                 {
                     list.map((row, idx) =>
-                        <MyCarRowItem key={idx} idx={idx} row={row} onDelete={deleteMycar}/>)
+                        <MyCarRowItem key={idx} idx={idx} row={row}
+                                      onDelete={deleteMycar} onUpdate={updateMycar}/>)
                 }
                 </tbody>
             </table>
