@@ -1,0 +1,24 @@
+ul.main_menu{
+    list-style: none;
+    margin-bottom: 30px;
+}
+ul.main_menu li{
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 20px;
+    line-height: 50px;
+    border: 2px solid gray;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 30px;
+    background-color: #b0fde4;
+    transition: transform 0.2s ease-in-out;
+}
+ul.main_menu li a{
+    text-decoration: none;
+    color: black;
+}
+ul.main_menu li:hover{
+    transform: translateY(-8px);
+}
