@@ -1,9 +1,10 @@
-package bit.mycar.controller;
+package bit.controller.mycar;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import bit.data.mycar.MycarDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,8 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import bit.mycar.data.MycarDto;
-import bit.mycar.service.MyCarService;
+import bit.service.mycar.MyCarService;
 import lombok.RequiredArgsConstructor;
 import naver.storage.NcpObjectStorageService;
 
