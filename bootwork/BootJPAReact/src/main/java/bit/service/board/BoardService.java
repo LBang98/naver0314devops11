@@ -21,20 +21,20 @@ public class BoardService {
         return boardDao.getAllDatas();
     }
 
-    public void updateReadCount(Long boardNum){
-        boardDao.updateReadCount(boardNum);
+    public void updateReadCount(Long boardnum){
+        boardDao.updateReadCount(boardnum);
     }
 
-    public BoardDto getData(Long boardNum){
-        return boardDao.getData(boardNum);
+    public BoardDto getData(Long boardnum){
+        return boardDao.getData(boardnum);
     }
 
-    public boolean isEqualPass(Long boardNum, String pass){
-        return boardDao.isEqualPass(boardNum, pass);
+    public boolean isEqualPass(Long boardnum, String pass){
+        return boardDao.isEqualPass(boardnum, pass);
     }
 
-    public void deleteBoard(Long boardNum){
-        boardDao.deleteBoard(boardNum);
+    public void deleteBoard(Long boardnum){
+        boardDao.deleteBoard(boardnum);
     }
 
     public void updateBoard(BoardDto dto){

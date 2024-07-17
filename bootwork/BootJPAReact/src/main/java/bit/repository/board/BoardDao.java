@@ -18,23 +18,23 @@ public class BoardDao {
     }
 
     public List<BoardDto> getAllDatas(){
-        return boardDaoInter.findAll(Sort.by(Sort.Direction.DESC,"board_num"));
+        return boardDaoInter.findAll(Sort.by(Sort.Direction.DESC,"boardnum"));
     }
 
-    public void updateReadCount(Long boardNum){
-        boardDaoInter.updateReadCount(boardNum);
+    public void updateReadCount(Long boardnum){
+        boardDaoInter.updateReadCount(boardnum);
     }
 
-    public BoardDto getData(Long boardNum){
-        return boardDaoInter.getReferenceById(boardNum);
+    public BoardDto getData(Long boardnum){
+        return boardDaoInter.getReferenceById(boardnum);
     }
 
-    public boolean isEqualPass(Long boardNum, String pass){
-        return boardDaoInter.isEqualPass(boardNum, pass) == 1?true:false;
+    public boolean isEqualPass(Long boardnum, String pass){
+        return boardDaoInter.isEqualPass(boardnum, pass) == 1?true:false;
     }
 
-    public void deleteBoard(Long boardNum){
-        boardDaoInter.deleteById(boardNum);
+    public void deleteBoard(Long boardnum){
+        boardDaoInter.deleteById(boardnum);
     }
 
     public void updateBoard(BoardDto dto){

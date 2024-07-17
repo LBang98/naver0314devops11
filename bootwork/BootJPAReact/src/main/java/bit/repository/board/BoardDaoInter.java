@@ -1,6 +1,8 @@
 package bit.repository.board;
 
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -12,19 +14,23 @@ public interface BoardDaoInter extends JpaRepository<BoardDto,Long>{
     @Query(value = """
 			update reactboard  set writer=:#{#dto.writer},
 			subject=:#{#dto.subject},content=:#{#dto.content}
-			 where board_num=:#{#dto.boardNum}
+			 where boardnum=:#{#dto.boardnum}
 			""",nativeQuery = true)
+	@Modifying
+	@Transactional
     public void updateBoardNoPhoto(@Param("dto") BoardDto dto);
 
     @Query(value = """
-			update reactboard set readcount=readcount+1 where board_num=:boardNum
+			update reactboard set readcount=readcount+1 where boardnum=:boardnum
 			""",nativeQuery = true)
-    public void updateReadCount(@Param("boardNum") Long boardNum);
+	@Modifying
+	@Transactional
+    public void updateReadCount(@Param("boardnum") Long boardnum);
 
     @Query(value = """
 			select count(*) from reactboard 
-			where board_num=:boardNum and pass=:pass
+			where boardnum=:boardnum and pass=:pass
 			""",nativeQuery = true)
-    public int isEqualPass(@Param("boardNum") Long boardNum,@Param("pass") String pass);
+    public int isEqualPass(@Param("boardnum") Long boardnum,@Param("pass") String pass);
 
 }
