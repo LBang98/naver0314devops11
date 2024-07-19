@@ -12,6 +12,50 @@ import DialogTitle from '@mui/material/DialogTitle';
 const BoardDetail = () => {
     const {boardnum}=useParams();
     const [selectData,setSelectData]=useState({});
+    const [nickname,setNickname]=useState('');
+    const [comment,setComment]=useState('');
+
+    //댓글 입력후 엔터 이벤트
+    const addCommentEvent=()=>{
+        //alert("comment");
+        if(nickname===''){
+            alert("닉네임을 입력해주세요");
+            return;
+        }
+
+        if(comment===''){
+            alert("코멘트를 입력해주세요");
+            return;
+        }
+
+        // let url=`/boot/comment/insert?boardnum=${boardnum}&nickname=${nickname}&comment=${comment}`;
+        // axios.get(url)
+        // .then(res=>{
+        //   commentListEvent();//댓글 다시 출력
+        //   //입력값 초기화
+        //   setNickname('');
+        //   setComment('');
+        // });
+
+        axios.post("/boot/comment/insert",{boardnum,nickname,comment})
+            .then(res=>{
+                commentListEvent();//댓글 다시 출력
+                //입력값 초기화
+                setNickname('');
+                setComment('');
+            });
+
+    }
+
+    //댓글 출력 함수
+    const commentListEvent=()=>{
+
+    }
+
+    // useEffect(()=>{
+    //   addCommentEvent();
+    // },[comment]);//comment 값이 변경된후 함수 호출
+
     const storage=process.env.REACT_APP_STORAGE;
     const navi=useNavigate();
 
@@ -70,7 +114,7 @@ const BoardDetail = () => {
 
                             }
                             {/* dangerouslySetInnerHTML은 DOM에서 innerHTML을 사용하기 위한 리액트의 대체 방법이다.
-                        innerHTML을 사용하면 DOM의 변경을 인식하지 못한다.
+                        innerHTML을 사용하면 DOM의 변경을 인식하지 못한다. 
                         대신 dangerouslySetInnerHTML를 사용하게 되면 가상 DOM과 실제 DOM을 비교해 변경된 곳을 리렌더링 해준다. */}
                             <pre dangerouslySetInnerHTML={{__html: selectData.content}}></pre>
 
@@ -88,7 +132,7 @@ const BoardDetail = () => {
                             &nbsp;
                             <Button variant='outlined' color='success'
                                     size="small" style={{width:'80px'}}
-                            >수정</Button>
+                                    onClick={()=>navi(`/board/updatepass/${boardnum}`)}>수정</Button>
 
                             &nbsp;
                             <Button variant='outlined' color='success'
@@ -143,9 +187,32 @@ const BoardDetail = () => {
                             </Dialog>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                댓글 목록
+                            </div>
+                            <hr/>
+                            <div className='input-group' style={{width:'500px'}}>
+                                {/* 댓글 입력 */}
+                                <input type='text' className='form-control'
+                                       style={{width:'120px'}} placeholder='닉네임입력'
+                                       value={nickname} onChange={(e)=>setNickname(e.target.value)}/>
+                                &nbsp;&nbsp;
+                                <input type='text' className='form-control'
+                                       placeholder='댓글을 입력하세요'
+                                       value={comment} onChange={(e)=>setComment(e.target.value)}
+                                       style={{width:'250px'}}/>
+                                &nbsp;&nbsp;
+                                <Button variant='contained' size="small" color='error'
+                                        onClick={addCommentEvent}>저장</Button>
+                            </div>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             }
+
         </div>
     );
 };

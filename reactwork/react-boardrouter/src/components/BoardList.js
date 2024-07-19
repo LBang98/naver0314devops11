@@ -2,8 +2,7 @@ import { Alert } from '@mui/material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import noimage from '../image/noimage1.png';
-import noimage2 from '../image/noimage2.png';
+import noimage from '../image/K-037.png';
 
 const BoardList = () => {
     const [boardList,setBoardList]=useState([]);
@@ -30,8 +29,8 @@ const BoardList = () => {
                 <thead>
                 <tr className='table-danger'>
                     <th style={{width:'50px'}}>번호</th>
-                    <th style={{width:'350px'}}>제목</th>
-                    <th style={{width:'70px'}}>작성자</th>
+                    <th style={{width:'330px'}}>제목</th>
+                    <th style={{width:'100px'}}>작성자</th>
                     <th style={{width:'100px'}}>작성일</th>
                     <th style={{width:'50px'}}>조회</th>
                 </tr>
@@ -46,7 +45,7 @@ const BoardList = () => {
                                 <NavLink to={`/board/detail/${row.boardnum}`}
                                          style={{textDecoration:'none',color:'black'}}>
                                     <img alt=''
-                                         src={row.photo==='no'?noimage2:`${storage}/${row.photo}`}
+                                         src={row.photo==='no'?noimage:`${storage}/${row.photo}`}
                                          style={{width:'40px',height:'40px',marginRight:'5px'}}/>
 
                                     {row.subject}

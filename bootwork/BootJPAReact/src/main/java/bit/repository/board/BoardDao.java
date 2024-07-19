@@ -1,6 +1,5 @@
-package bit.repository.board;
+package bit.data.board;
 
-import bit.data.board.BoardDto;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
