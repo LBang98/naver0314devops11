@@ -1,4 +1,4 @@
-package bit.data.board;
+package bit.repository.board;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import bit.data.board.BoardCommentDto;
 import jakarta.transaction.Transactional;
 
 public interface BoardCommentDaoInter
@@ -25,4 +26,5 @@ public interface BoardCommentDaoInter
     @Modifying
     @Transactional
     public void updateComment(@Param("idx") Long idx,@Param("comment") String comment);
+
 }

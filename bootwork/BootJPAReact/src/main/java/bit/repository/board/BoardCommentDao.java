@@ -1,9 +1,10 @@
-package bit.data.board;
+package bit.repository.board;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import bit.data.board.BoardCommentDto;
 import lombok.AllArgsConstructor;
 
 @Repository
