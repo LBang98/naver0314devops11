@@ -8,12 +8,14 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { EditNote, HighlightOff, UpdateOutlined, UpdateTwoTone } from '@mui/icons-material';
 
 const BoardDetail = () => {
     const {boardnum}=useParams();
     const [selectData,setSelectData]=useState({});
     const [nickname,setNickname]=useState('');
     const [comment,setComment]=useState('');
+    const [commentList,setCommentList]=useState([]);
 
     //댓글 입력후 엔터 이벤트
     const addCommentEvent=()=>{
@@ -49,12 +51,21 @@ const BoardDetail = () => {
 
     //댓글 출력 함수
     const commentListEvent=()=>{
-
+        axios.get(`/boot/comment/list?boardnum=${boardnum}`)
+            .then(res=>{
+                setCommentList(res.data);
+            })
     }
 
-    // useEffect(()=>{
-    //   addCommentEvent();
-    // },[comment]);//comment 값이 변경된후 함수 호출
+    //댓글 삭제 함수
+    const deleteComment=(idx)=>{
+        let url=`/boot/comment/delete?idx=${idx}`;
+        axios.delete(url)
+            .then(res=>{
+                //댓글 삭제후 댓글 목록 다시 출력
+                commentListEvent();
+            })
+    }
 
     const storage=process.env.REACT_APP_STORAGE;
     const navi=useNavigate();
@@ -81,6 +92,7 @@ const BoardDetail = () => {
 
     useEffect(()=>{
         getData();
+        commentListEvent();//처음 시작시 댓글 출력
     },[]);
 
     return (
@@ -114,7 +126,7 @@ const BoardDetail = () => {
 
                             }
                             {/* dangerouslySetInnerHTML은 DOM에서 innerHTML을 사용하기 위한 리액트의 대체 방법이다.
-                        innerHTML을 사용하면 DOM의 변경을 인식하지 못한다. 
+                        innerHTML을 사용하면 DOM의 변경을 인식하지 못한다.
                         대신 dangerouslySetInnerHTML를 사용하게 되면 가상 DOM과 실제 DOM을 비교해 변경된 곳을 리렌더링 해준다. */}
                             <pre dangerouslySetInnerHTML={{__html: selectData.content}}></pre>
 
@@ -190,7 +202,37 @@ const BoardDetail = () => {
                     <tr>
                         <td>
                             <div>
-                                댓글 목록
+                                {
+                                    commentList &&
+                                    commentList.map((item,idx)=>
+                                        <div key={idx}>
+                                            {item.nickname} : {item.comment}
+                                            <span style={{fontSize:'13px',color:'gray',marginLeft:'30px'}}>
+                                {item.writeday}</span>
+                                            &nbsp;&nbsp;
+                                            <EditNote style={{cursor:'pointer',color:'gray'}}
+                                                      onClick={()=>{
+                                                          let comment=window.prompt("댓글수정",item.comment);
+                                                          //alert(comment);
+
+                                                          let url=`/boot/comment/update?idx=${item.idx}&comment=${comment}`;
+                                                          axios.get(url)
+                                                              .then(res=>{
+                                                                  //수정후 목록 다시 호출
+                                                                  commentListEvent();
+                                                              });
+
+                                                      }}/>
+                                            &nbsp;&nbsp;
+                                            <HighlightOff style={{cursor:'pointer',color:'gray'}}
+                                                          onClick={()=>{
+                                                              let a=window.confirm("해당 댓글을 삭제하시겠습니까?");
+                                                              if(a){
+                                                                  deleteComment(item.idx);
+                                                              }
+                                                          }}/>
+                                        </div>)
+                                }
                             </div>
                             <hr/>
                             <div className='input-group' style={{width:'500px'}}>
